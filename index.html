@@ -6,7 +6,7 @@
     <title>Tool VN - Nền tảng Tool & Code Chuyên Nghiệp</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <meta name="description" content="Tool chất lượng - Miễn phí - Cập nhật liên tục">
     <meta name="keywords" content="tool, code, download, zalo, cộng đồng">
 </head>
@@ -15,12 +15,50 @@
         <!-- Header -->
         <header class="header">
             <div class="logo">
-                <i class="fas fa-fire"></i> Tool VN
+                <i class="fas fa-fire"></i> <span>TOOL</span> <span class="logo-accent">VN</span>
             </div>
             <div class="header-right">
+                <div class="color-picker">
+                    <button class="color-btn" data-theme="default" style="background: linear-gradient(135deg, #667eea, #764ba2)"></button>
+                    <button class="color-btn" data-theme="green" style="background: linear-gradient(135deg, #10b981, #059669)"></button>
+                    <button class="color-btn" data-theme="blue" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8)"></button>
+                    <button class="color-btn" data-theme="purple" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed)"></button>
+                    <button class="color-btn" data-theme="pink" style="background: linear-gradient(135deg, #ec4899, #db2777)"></button>
+                    <button class="color-btn" data-theme="orange" style="background: linear-gradient(135deg, #f97316, #ea580c)"></button>
+                    <button class="color-btn" data-theme="red" style="background: linear-gradient(135deg, #ef4444, #dc2626)"></button>
+                    <button class="color-btn" data-theme="teal" style="background: linear-gradient(135deg, #14b8a6, #0d9488)"></button>
+                    <button class="color-btn" data-theme="yellow" style="background: linear-gradient(135deg, #eab308, #ca8a04)"></button>
+                    <button class="color-btn" data-theme="cyan" style="background: linear-gradient(135deg, #06b6d4, #0891b2)"></button>
+                </div>
                 <button class="theme-toggle" id="themeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
+                <button class="overlay-toggle" id="overlayToggle">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button class="glass-toggle" id="glassToggle">
+                    <i class="fas fa-glass-water"></i>
+                </button>
+                <button class="animation-toggle" id="animationToggle">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="matrix-toggle" id="matrixToggle">
+                    <i class="fas fa-code"></i>
+                </button>
+                <button class="random-bg" id="randomBg">
+                    <i class="fas fa-dice"></i>
+                </button>
+                <div class="font-controls">
+                    <button class="font-toggle" id="fontToggle">
+                        <i class="fas fa-font"></i>
+                    </button>
+                    <button class="font-size-up" id="fontSizeUp">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="font-size-down" id="fontSizeDown">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -39,30 +77,8 @@
             </ul>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-in">Chia sẻ Tool & Code</h1>
-                <p class="hero-subtitle animate-fade-in">Tool chất lượng - Miễn phí - Cập nhật liên tục</p>
-                <div class="hero-stats animate-fade-in">
-                    <div class="stat-item">
-                        <i class="fas fa-download"></i>
-                        <span>10K+</span>
-                        <p>Tải xuống</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <span>3+</span>
-                        <p>Thành viên</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-code"></i>
-                        <span>1</span>
-                        <p>Tools</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Dark Overlay -->
+        <div class="dark-overlay" id="darkOverlay"></div>
 
         <!-- Main Content -->
         <main class="main-content">
@@ -71,97 +87,118 @@
                 <div class="card-container">
                     <div class="card">
                         <div class="card-header">
+                            <div class="glow-effect"></div>
                             <i class="fas fa-laptop-code"></i>
-                            <h2>💻 Tool SnapChat</h2>
+                            <h2>💻 Tool VN</h2>
                         </div>
                         <div class="card-body">
                             <p>Tải tool và tham gia cộng đồng:</p>
-                            <div class="button-group">
-                                <a href="https://link4sub.com/notes/nwka" class="btn download-btn" download>
-                                    <i class="fas fa-download"></i> Tải Tool
+                            
+                            <!-- Main Action Buttons (Larger) -->
+                            <div class="main-buttons">
+                                <a href="https://link4sub.com/note/nwka" class="btn download-btn" download>
+                                    <i class="fas fa-download"></i>
+                                    <span>Tải Tool golike SnapChat</span>
+                                </a>
+                            <!-- Nút mới thêm -->
+                                <a href="https://link4sub.com/notes/1BFG" class="btn download-btn" download>
+                                    <i class="fas fa-cloud-download-alt"></i>
+                                    <span>Tải Tool nuôi fb vip</span>
                                 </a>
                                 <a href="https://zalo.me/g/rwghmcw5rdkr10ywhrgv" class="btn zalo-btn" target="_blank">
-                                    <i class="fab fa-zalo"></i> Vào Group Zalo
+                                    <i class="fab fa-zalo"></i>
+                                    <span>Tham Gia Nhóm Zalo</span>
                                 </a>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Features -->
-                    <div class="features-section">
-                        <h3>Tính năng nổi bật</h3>
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <h4>An toàn tuyệt đối</h4>
-                                <p>Tool được kiểm tra kỹ lưỡng trước khi chia sẻ</p>
+                            
+                            <!-- Accordion Section -->
+                            <div class="accordion-section">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3>Thông tin về Tool VN</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>Tool VN là nền tảng chia sẻ tool và code miễn phí, chất lượng cao. Chúng tôi liên tục cập nhật các công cụ mới nhất để phục vụ cộng đồng phát triển.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <h3>Cách sử dụng</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion-content">
+                                        <p>1. Tải tool về điện thoại hoặc máy tính<br>2. Chạy file<br>3. Tham gia nhóm Zalo để nhận hỗ trợ</p>
+                                    </div>
+                       
+                            <!-- 3D Buttons -->
+                            <div class="3d-buttons">
+                                <h3>Các tính năng nổi bật</h3>
+                                <div class="button-row">
+                                    <button class="3d-btn primary">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>An toàn tuyệt đối</span>
+                                    </button>
+                                    <button class="3d-btn secondary">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Nhanh chóng</span>
+                                    </button>
+                                </div>
+                                <div class="button-row">
+                                    <button class="3d-btn success">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <span>Cập nhật liên tục</span>
+                                    </button>
+                                    <button class="3d-btn warning">
+                                        <i class="fas fa-headset"></i>
+                                        <span>Hỗ trợ 24/7</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="feature-item">
-                                <i class="fas fa-bolt"></i>
-                                <h4>Nhanh chóng</h4>
-                                <p>Tốc độ tải về tối ưu</p>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-sync-alt"></i>
-                                <h4>Cập nhật liên tục</h4>
-                                <p>Luôn có phiên bản mới nhất</p>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-headset"></i>
-                                <h4>Hỗ trợ 24/7</h4>
-                                <p>Đội ngũ hỗ trợ luôn sẵn sàng</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            
 
-<!-- Recent Tools -->
-<section class="recent-tools">
-    <h3>Các Tool Mới Nhất</h3>
-    <div class="tools-grid">
-
-        <!-- Tool 1 -->
-        <div class="tool-card">
-            <div class="tool-icon">
-                <i class="fas fa-code"></i>
-            </div>
-            <h4>1</h4>
-            <p>Chưa ra mắt</p>
-
-            <a href="https://your-domain.com/code-generator" class="tool-btn">
-                <i class="fas fa-download"></i> Tải / Truy cập
-            </a>
+<!-- Feature Cards -->
+<div class="feature-cards">
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
         </div>
-
-        <!-- Tool 2 -->
-        <div class="tool-card">
-            <div class="tool-icon">
-                <i class="fas fa-paint-brush"></i>
-            </div>
-            <h4>2</h4>
-            <p>Chưa ra mắt</p>
-
-            <a href="https://your-domain.com/design-tool" class="tool-btn">
-                <i class="fas fa-download"></i> Tải / Truy cập
-            </a>
-        </div>
-
-        <!-- Tool 3 -->
-        <div class="tool-card">
-            <div class="tool-icon">
-                <i class="fas fa-database"></i>
-            </div>
-            <h4>3</h4>
-            <p>Chưa ra mắt</p>
-
-            <a href="https://your-domain.com/database-manager" class="tool-btn">
-                <i class="fas fa-download"></i> Tải / Truy cập
-            </a>
-        </div>
-
+        <h3>Fast Performance</h3>
+        <p>Tốc độ tải nhanh, tối ưu cho mọi thiết bị</p>
     </div>
-</section>
+
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Responsive Design</h3>
+        <p>Hiển thị đẹp trên điện thoại, tablet và PC</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        <h3>Secure System</h3>
+        <p>Bảo mật cao, bảo vệ dữ liệu người dùng</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Custom Settings</h3>
+        <p>Tùy chỉnh giao diện theo ý thích</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">
+            <i class="fas fa-cloud"></i>
+        </div>
+        <h3>Cloud Sync</h3>
+        <p>Đồng bộ dữ liệu nhanh chóng</p>
+    </div>
+</div>
 
         <!-- Footer -->
         <footer class="footer">
@@ -170,13 +207,24 @@
                     <i class="fas fa-fire"></i> Tool VN
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-btn youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-btn discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
                 </div>
                 <div class="footer-info">
-                    <p>&copy;  Tool VN | Dev by Tuấn tú</p>
+                    <p>&copy; 2026 Tool VN | Dev by Tuấn tú</p>
                     <p class="footer-links">
                         <a href="#">Về chúng tôi</a> | 
                         <a href="#">Điều khoản</a> | 
@@ -185,8 +233,29 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-top" id="scrollTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- Scroll to Bottom Button -->
+        <button class="scroll-bottom" id="scrollBottom">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+
+        <!-- Toast Container -->
+        <div class="toast-container" id="toastContainer"></div>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Matrix Rain -->
+        <canvas id="matrixCanvas"></canvas>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
